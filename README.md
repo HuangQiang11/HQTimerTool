@@ -1,5 +1,5 @@
 # HQTimerTool
-NSTimer造成的内存泄露的解决方案</br>
+NSTimer造成的内存泄露的解决方案,优化HWWeakTimer使用block创建NStimer的方案</br>
 主要代码：
 ```
 + (NSTimer *)hTimerWithTimeInterval:(NSTimeInterval)interval repeats:(BOOL)repeats target:(id)target timerBlock:(TimerBlock)timerBlock{
