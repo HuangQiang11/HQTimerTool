@@ -1,7 +1,7 @@
 # HQTimerTool
 解决NSTimer造成的内存泄露</br>
 主要代码：
-###
+```
 + (NSTimer *)hTimerWithTimeInterval:(NSTimeInterval)interval repeats:(BOOL)repeats target:(id)target timerBlock:(TimerBlock)timerBlock{
     __weak typeof(target) weakTarget = target;
     TimerBlock block = ^(NSTimer * t){
@@ -23,4 +23,4 @@
     }
 }
 
-###
+```
