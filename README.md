@@ -8,7 +8,7 @@ HWWeakTimer使用block创建NStimer时，必须要在vc的dealloc方法中调用
     __weak typeof(target) weakTarget = target;
     TimerBlock block = ^(NSTimer * t){
         if (weakTarget) {
-            timerBlock(nil);
+            timerBlock(t);
         }else{
             [t invalidate];
         }
