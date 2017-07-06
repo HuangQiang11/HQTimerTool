@@ -9,7 +9,7 @@
 #import "NextController.h"
 #import "NSTimer+H_Tool.h"
 @interface NextController ()
-
+@property (strong, nonatomic) NSTimer * timer;
 @end
 
 @implementation NextController
@@ -18,7 +18,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     __weak typeof(self) welfSelf = self;
-    [NSTimer hTimerWithTimeInterval:1.0f repeats:YES target:self timerBlock:^(id sender){
+    self.timer = [NSTimer hTimerWithTimeInterval:1.0f repeats:YES target:self timerBlock:^(id sender){
         NSLog(@"timer:%@ ",welfSelf);
     }];
 }

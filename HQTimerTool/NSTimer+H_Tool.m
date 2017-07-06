@@ -13,7 +13,7 @@
     __weak typeof(target) weakTarget = target;
     TimerBlock block = ^(NSTimer * t){
         if (weakTarget) {
-            timerBlock(nil);
+            timerBlock(t);
         }else{
             [t invalidate];
         }
